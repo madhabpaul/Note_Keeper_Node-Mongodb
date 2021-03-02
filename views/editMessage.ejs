@@ -1,0 +1,17 @@
+<%- include('header') %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div class="form-group">
+        <form action="/viewMessage/edit/" method="POST">
+            <input type="hidden" name="id" value="<%= id%>" />
+            <input type="text" name="categoryOption" value="<%= results.categoryOption %>" readonly />
+            <textarea class="form-control" type="text" id="editor" name="message" rows="5" placeholder="Enter your message" ><%= results.message %></textarea>
+            <input type="submit" class="btn btn-primary" value="Update Message"/>
+        </form>
+    </div>
+    <p><a href="/viewMessage"> View All Message</a></p>
+    <script>
+        CKEDITOR.replace( 'editor' );
+    </script>
+  </body>
+</html>

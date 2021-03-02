@@ -1,0 +1,13 @@
+<%- include('header') %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    
+
+    <form action="/category/edit/" method="POST">
+        <input type="hidden" name="id" value="<%= id%>" />
+        <input type="text" name="categoryName" value="<%= results.categoryName%>" placeholder="Enter new category name" />
+        <input type="submit" value="Update Category"/>
+    </form>
+    <p><a href="/category"> View All Category</a></p>
+  </body>
+</html>

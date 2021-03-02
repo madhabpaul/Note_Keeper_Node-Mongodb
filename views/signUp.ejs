@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if(msg !='') {%>
+        <p style="text-align: center;">   <%= msg%> </p> 
+    <% } %>   
+    <form action="/signup" method="POST">
+        <input type="text" name="userName" placeholder="Username" required />
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required/>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        <input type="submit" value="Sign Up"/>
+    </form>
+    <p>Already have an account? <a href="/"> LogIn Here</a></p>
+  </body>
+</html>
